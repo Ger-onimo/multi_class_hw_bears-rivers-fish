@@ -17,5 +17,7 @@ class River
       @fish_num << fish
     end
 
-
+    def remove_fish()
+      @fish_num.shift()
+    end
 end

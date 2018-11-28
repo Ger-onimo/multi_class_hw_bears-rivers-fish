@@ -2,6 +2,7 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../river")
 require_relative("../fish")
+require_relative("../bear")
 
 
 class RiverTest < MiniTest::Test
@@ -28,4 +29,10 @@ class RiverTest < MiniTest::Test
     assert_equal(1, @river.fish_in_river)
   end
 
-end
+    def test_remove_fish()
+      @river.fish_stock(@fish1)
+      @river.remove_fish()
+      assert_equal(0, @river.fish_in_river())
+    end
+
+  end
