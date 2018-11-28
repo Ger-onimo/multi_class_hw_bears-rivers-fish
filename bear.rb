@@ -15,7 +15,7 @@ class Bear
     end
 
     def take_fish(river)
-      for fish in river.fish_num()
+      for fish in river.fish_stock()
          @stomach_contents << fish
        end
        river.remove_fish()

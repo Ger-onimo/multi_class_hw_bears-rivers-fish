@@ -32,7 +32,7 @@ class BearTest < MiniTest::Test
 
   def test_bear_takes_fish
     @river = River.new("Amazon")
-    @river.fish_stock(@fish1)
+    @river.add_to_fish_stock(@fish1)
     @bear.take_fish(@river)
     assert_equal(1, @bear.stomach_count())
     assert_equal(0, @river.fish_in_river())
